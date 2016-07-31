@@ -22,6 +22,10 @@ group :development, :test do
   gem "rspec-rails"
 end
 
+group :test do
+  gem "coveralls", require: false
+end
+
 group :development do
   gem "listen", "~> 3.0.5"
   gem "spring"
