@@ -25,6 +25,7 @@ end
 group :development, :test do
   gem "byebug", platform: :mri
   gem "dotenv-rails"
+  gem "pry-rails"
   gem "rspec-rails"
 end
 
