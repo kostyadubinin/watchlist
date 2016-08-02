@@ -4,7 +4,7 @@ source "https://rubygems.org"
 ruby "2.3.1"
 
 gem "autoprefixer-rails"
-gem "bourbon"
+gem "bourbon", "5.0.0.beta.6"
 gem "coffee-rails", "~> 4.2"
 gem "haml-rails"
 gem "jbuilder", "~> 2.5"
