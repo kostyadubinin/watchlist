@@ -33,8 +33,9 @@ group :test do
 end
 
 group :development do
-  gem "refills", github: "thoughtbot/refills"
+  gem "bullet"
   gem "listen", "~> 3.1"
+  gem "refills", github: "thoughtbot/refills"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
