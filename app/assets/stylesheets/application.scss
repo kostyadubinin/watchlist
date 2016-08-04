@@ -1,3 +1,14 @@
 @import "bourbon";
 @import "neat";
-@import "base/base";
+
+@import "variables";
+
+@import "base";
+
+@import "buttons";
+@import "forms";
+@import "layout";
+@import "lists";
+@import "media";
+@import "tables";
+@import "typography";
