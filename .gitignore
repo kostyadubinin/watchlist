@@ -4,3 +4,4 @@
 /tmp
 .rspec
 spec/examples.txt
+coverage/
