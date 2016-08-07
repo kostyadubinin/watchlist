@@ -4,12 +4,10 @@ source "https://rubygems.org"
 ruby "2.3.1"
 
 gem "autoprefixer-rails"
-gem "bourbon", "5.0.0.beta.6"
 gem "coffee-rails", "~> 4.2"
 gem "haml-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
-gem "neat"
 gem "pg"
 gem "puma", "~> 3.0"
 gem "rails", "~> 5.0.0"
@@ -37,7 +35,6 @@ end
 group :development do
   gem "bullet"
   gem "listen", "~> 3.1"
-  gem "refills", github: "thoughtbot/refills"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
