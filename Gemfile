@@ -23,8 +23,10 @@ group :production do
 end
 
 group :development, :test do
+  gem "awesome_print"
   gem "byebug", platform: :mri
   gem "dotenv-rails"
+  gem "pry-rails"
   gem "rspec-rails"
 end
 
