@@ -1,4 +1,6 @@
 en:
   application:
+    locale_switcher:
+      nl: "Dutch"
     footer:
       created_by: created by
