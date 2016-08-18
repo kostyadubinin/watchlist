@@ -1,9 +1,9 @@
 .ui.vertical.segment
   .ui.huge.secondary.menu
     %a.active.red.item
-      Movies
+      = t(".movies")
     %a.item
-      People
+      = t(".people")
     .right.menu
       .ui.search.item
         .ui.icon.input
@@ -11,4 +11,4 @@
           %i.search.link.icon
       = render "locale_switcher"
       %a.ui.item
-        Log out
+        = t(".log_out")

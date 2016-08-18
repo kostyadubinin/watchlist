@@ -1,6 +1,10 @@
 en:
   application:
+    header:
+      movies: "Movies"
+      people: "People"
+      log_out: "Log out"
     locale_switcher:
       nl: "Dutch"
     footer:
-      created_by: created by
+      created_by: "created by"
