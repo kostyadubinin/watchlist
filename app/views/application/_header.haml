@@ -5,10 +5,7 @@
     %a.item
       = t(".people")
     .right.menu
-      .ui.search.item
-        .ui.icon.input
-          %input.prompt{ placeholder: "Search...", type: "text" }
-          %i.search.link.icon
+      = render "search_form"
       = render "locale_switcher"
       %a.ui.item
         = t(".log_out")
