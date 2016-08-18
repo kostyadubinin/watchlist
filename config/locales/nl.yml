@@ -1,6 +1,10 @@
 nl:
   application:
+    header:
+      movies: "Films"
+      people: "Mensen"
+      log_out: "Uitloggen"
     locale_switcher:
       en: "Engels"
     footer:
-      created_by: gemaakt door
+      created_by: "gemaakt door"
