@@ -1,4 +1,6 @@
 nl:
   application:
+    locale_switcher:
+      en: "Engels"
     footer:
       created_by: gemaakt door
