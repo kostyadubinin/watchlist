@@ -4,6 +4,8 @@ nl:
       movies: "Films"
       people: "Mensen"
       log_out: "Uitloggen"
+    search_form:
+      input_placeholder: "Zoeken..."
     locale_switcher:
       en: "Engels"
     footer:

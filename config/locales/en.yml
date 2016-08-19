@@ -4,6 +4,8 @@ en:
       movies: "Movies"
       people: "People"
       log_out: "Log out"
+    search_form:
+      input_placeholder: "Search..."
     locale_switcher:
       nl: "Dutch"
     footer:
