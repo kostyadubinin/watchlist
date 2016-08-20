@@ -1,13 +1,3 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.page-content {
-  flex: 1;
-}
-
 .translation_missing {
   background-color: $red;
   color: $white;
