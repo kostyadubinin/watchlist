@@ -6,8 +6,9 @@
     = csrf_meta_tags
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
-  %body
-    .ui.container.page-content
-      = render "header"
-      = yield
-    = render "footer"
+  %body.Site
+    .Site-header
+      .ui.container= render "header"
+    .Site-content
+      .ui.container= yield
+    .Site-footer= render "footer"
