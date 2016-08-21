@@ -10,10 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    I18n.locale = if I18n.locale_available?(params[:locale])
-                    params[:locale]
-                  else
-                    I18n.default_locale
-                  end
+    locale = params[:locale]
+    locale = I18n.locale_available?(locale) ? locale : I18n.default_locale
+    I18n.locale = locale
+    Tmdb::Api.language(locale)
   end
 end
