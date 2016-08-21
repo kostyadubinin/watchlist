@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
+gem "themoviedb-api"
 gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.2"
 gem "haml-rails"
