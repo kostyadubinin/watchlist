@@ -3,9 +3,9 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem "themoviedb-api"
 gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.2"
+gem "font-awesome-sass"
 gem "haml-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
@@ -16,6 +16,7 @@ gem "routing-filter"
 gem "sass-rails", "~> 5.0"
 gem "semantic-ui-sass", github: "doabit/semantic-ui-sass"
 gem "sentry-raven"
+gem "themoviedb-api"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 
