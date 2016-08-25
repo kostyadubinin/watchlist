@@ -34,6 +34,7 @@ end
 
 group :test do
   gem "coveralls", require: false
+  gem "webmock"
 end
 
 group :development do

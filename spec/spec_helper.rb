@@ -4,6 +4,8 @@
 # consider making a separate helper file that requires the additional
 # dependencies and performs the additional setup, and require it from the spec
 # files that actually need it.
+require "webmock/rspec"
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
