@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/doabit/semantic-ui-sass.git
-  revision: 3d7ba49ff11665e185beb96026676e3819feee3d
+  revision: 119c166f490682c40fe0274f7d3ccb86e384fa0a
   specs:
     semantic-ui-sass (2.2.4.0)
       sass (>= 3.2)
@@ -46,12 +46,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    arel (7.1.1)
-    autoprefixer-rails (6.4.0.3)
+    arel (7.1.2)
+    autoprefixer-rails (6.4.1.1)
       execjs
     awesome_print (1.7.0)
     builder (3.2.2)
-    bullet (5.3.0)
+    bullet (5.4.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
     byebug (9.0.5)
@@ -123,7 +123,7 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (2.99.2)
+    mime-types (2.99.3)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
@@ -180,7 +180,7 @@ GEM
     routing-filter (0.6.0)
       actionpack (>= 4.2, < 5.1)
       activesupport (>= 4.2, < 5.1)
-    rspec-core (3.5.2)
+    rspec-core (3.5.3)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
