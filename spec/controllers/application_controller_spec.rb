@@ -18,12 +18,6 @@ RSpec.describe ApplicationController do
         get :index
         expect(I18n.locale).to eq(default_locale)
       end
-
-      it "sets the TMDb locale to the default locale" do
-        I18n.locale = custom_locale
-        get :index
-        expect(Tmdb::Api.params[:language].to_sym).to eq(default_locale)
-      end
     end
 
     context "when the locale is provided" do
@@ -33,23 +27,12 @@ RSpec.describe ApplicationController do
           get :index, params: { locale: :elvish }
           expect(I18n.locale).to eq(default_locale)
         end
-
-        it "sets the TMDb locale to the default locale" do
-          I18n.locale = custom_locale
-          get :index, params: { locale: :elvish }
-          expect(Tmdb::Api.params[:language].to_sym).to eq(default_locale)
-        end
       end
 
       context "when the provided locale is available" do
         it "sets the locale to the provided locale" do
           get :index, params: { locale: custom_locale }
           expect(I18n.locale).to eq(custom_locale)
-        end
-
-        it "sets the TMDb locale to the provided locale" do
-          get :index, params: { locale: custom_locale }
-          expect(Tmdb::Api.params[:language].to_sym).to eq(custom_locale)
         end
       end
     end
