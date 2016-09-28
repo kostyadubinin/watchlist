@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Keep this file as light-weight as possible. Requiring heavyweight dependencies
 # from this file will add to the boot time of your test suite on EVERY test run,
 # even for an individual file that may not need all of that loaded. Instead,
@@ -31,9 +32,7 @@ RSpec.configure do |config|
 
   config.disable_monkey_patching!
 
-  if config.files_to_run.one?
-    config.default_formatter = "doc"
-  end
+  config.default_formatter = "doc" if config.files_to_run.one?
 
   config.profile_examples = 10
   config.order = :random
