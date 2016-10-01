@@ -5,7 +5,7 @@ module TmdbApiHelper
       :get,
       "https://api.themoviedb.org/3/movie/popular"
     ).with(
-      query: { api_key: ENV["TMDB_API_KEY"] }
+      query: { api_key: ENV["TMDB_API_KEY"], language: I18n.locale }
     ).to_return(
       status: 200,
       body: read_fixture("movie_popular.json"),

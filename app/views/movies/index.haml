@@ -1,0 +1,16 @@
+-# TODO: Decorate and localize.
+.ui.four.column.stackable.doubling.grid
+  - @movies.each do |movie|
+    .column
+      .ui.fluid.card
+        .image= image_tag "https://image.tmdb.org/t/p/w500#{movie['backdrop_path']}"
+        .content
+          .header= movie["title"]
+          .meta
+            %span= movie["release_date"]
+        .extra.content
+          %i.fa.fa-star
+          = movie["vote_average"]
+          .right.floated
+            %i.fa.fa-users
+            = movie["vote_count"]
