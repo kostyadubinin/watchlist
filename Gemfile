@@ -5,6 +5,8 @@ ruby "2.3.1"
 
 gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.2"
+gem "faraday"
+gem "faraday_middleware"
 gem "font-awesome-sass"
 gem "haml-rails"
 gem "jbuilder", "~> 2.5"
