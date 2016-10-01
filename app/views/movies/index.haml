@@ -3,7 +3,8 @@
   - @movies.each do |movie|
     .column
       .ui.fluid.card
-        .image= image_tag "https://image.tmdb.org/t/p/w500#{movie['backdrop_path']}"
+        - image_url = "https://image.tmdb.org/t/p/w500#{movie['backdrop_path']}"
+        .image= image_tag(image_url)
         .content
           .header= movie["title"]
           .meta
