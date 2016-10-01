@@ -23,8 +23,8 @@ RSpec.describe MoviePresenter do
       backdrop_size = described_class::BACKDROP_SIZE
       backdrop_path = movie["backdrop_path"]
 
-      expect(presenter.backdrop_url)
-        .to eq("#{base_url}#{backdrop_size}#{backdrop_path}")
+      expect(presenter.backdrop_url).
+        to eq("#{base_url}#{backdrop_size}#{backdrop_path}")
     end
   end
 end
