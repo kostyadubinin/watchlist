@@ -7,4 +7,9 @@ module ApplicationHelper
   def flag_class(locale)
     locale == :en ? :us : locale
   end
+
+  def present(model, with:)
+    presenter = with.new(model, self)
+    block_given? ? yield(presenter) : presenter
+  end
 end

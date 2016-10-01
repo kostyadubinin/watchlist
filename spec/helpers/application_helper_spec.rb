@@ -25,4 +25,24 @@ RSpec.describe ApplicationHelper do
       expect(helper.flag_class(:en)).to eq(:us)
     end
   end
+
+  describe "#present" do
+    let(:movie) { read_fixture("movie_popular.json")["results"][0] }
+
+    it "returns an instance of the given presenter" do
+      presenter = helper.present(movie, with: MoviePresenter)
+      expect(presenter).to be_an_instance_of(MoviePresenter)
+    end
+
+    it "represents the given object" do
+      presenter = helper.present(movie, with: MoviePresenter)
+      expect(presenter.model).to eq(movie)
+    end
+
+    it "accepts a block" do
+      helper.present(movie, with: MoviePresenter) do |movie_presenter|
+        expect(movie_presenter.model).to eq(movie)
+      end
+    end
+  end
 end
