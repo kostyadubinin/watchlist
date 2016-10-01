@@ -1,17 +1,16 @@
 -# TODO: Decorate and localize.
-.ui.four.column.stackable.doubling.grid
+.ui.four.stackable.doubling.cards
   - @movies.each do |movie|
     - movie_presenter = present(movie, with: MoviePresenter)
-    .column
-      .ui.fluid.card
-        .image= image_tag(movie_presenter.backdrop_url)
-        .content
-          .header= movie["title"]
-          .meta
-            %span= movie["release_date"]
-        .extra.content
-          %i.fa.fa-star
-          = movie["vote_average"]
-          .right.floated
-            %i.fa.fa-users
-            = movie["vote_count"]
+    .ui.card
+      .image= image_tag(movie_presenter.backdrop_url)
+      .content
+        .header= movie["title"]
+        .meta
+          %span= movie["release_date"]
+      .extra.content
+        %i.fa.fa-star
+        = movie["vote_average"]
+        .right.floated
+          %i.fa.fa-users
+          = movie["vote_count"]
