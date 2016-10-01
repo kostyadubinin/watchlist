@@ -5,10 +5,6 @@ RSpec.describe TmdbApi do
   describe "#client" do
     subject { described_class.new.client }
 
-    it "is a Faraday::Connection object" do
-      expect(subject).to be_a(Faraday::Connection)
-    end
-
     it "uses api.themoviedb.org host" do
       expect(subject.host).to eq("api.themoviedb.org")
     end
@@ -20,6 +16,17 @@ RSpec.describe TmdbApi do
 
     it "uses HTTPS" do
       expect(subject.scheme).to eq("https")
+    end
+
+    it "uses current locale" do
+      expect(subject.params[:language]).to eq(I18n.locale)
+    end
+
+    # TODO: Looks weird.
+    it "uses custom locale" do
+      I18n.locale = (I18n.available_locales - [I18n.default_locale]).first
+      expect(subject.params[:language]).to eq(I18n.locale)
+      I18n.locale = I18n.default_locale
     end
   end
 

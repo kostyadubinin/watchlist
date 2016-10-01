@@ -12,7 +12,7 @@ RSpec.describe ApplicationController do
   let(:default_locale) { I18n.default_locale }
 
   describe "setting locale" do
-    after { I18n.locale = I18n.default_locale }
+    after { I18n.locale = default_locale }
 
     context "when the locale is not provided" do
       it "sets the locale to the default locale" do
@@ -44,6 +44,13 @@ RSpec.describe ApplicationController do
     it "include a locale" do
       I18n.locale = custom_locale
       expect(root_path).to include("locale=#{custom_locale}")
+    end
+  end
+
+  describe "#api" do
+    it "responds to #movie_popular" do
+      api = ApplicationController.new.send(:api)
+      expect(api).to respond_to(:movie_popular)
     end
   end
 end

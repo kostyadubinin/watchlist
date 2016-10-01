@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
     locale = I18n.locale_available?(locale) ? locale : I18n.default_locale
     I18n.locale = locale
   end
+
+  def api
+    @api ||= TmdbApi.new
+  end
 end
