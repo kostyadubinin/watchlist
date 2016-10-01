@@ -36,7 +36,7 @@ RSpec.describe TmdbApi do
     end
 
     it "contains result's id" do
-      expect(subject["results"][0]["id"]).to eq(297761)
+      expect(subject["results"][0]["id"]).to eq(297_761)
     end
   end
 end
