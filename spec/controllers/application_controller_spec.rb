@@ -12,6 +12,8 @@ RSpec.describe ApplicationController do
   let(:default_locale) { I18n.default_locale }
 
   describe "setting locale" do
+    after { I18n.locale = I18n.default_locale }
+
     context "when the locale is not provided" do
       it "sets the locale to the default locale" do
         I18n.locale = custom_locale

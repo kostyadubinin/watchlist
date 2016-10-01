@@ -3,6 +3,8 @@ require "rails_helper"
 
 RSpec.describe ApplicationHelper do
   describe "#other_locale" do
+    after { I18n.locale = I18n.default_locale }
+
     it "returns :nl if the current locale is :en" do
       I18n.locale = :en
       expect(helper.other_locale).to eq(:nl)
