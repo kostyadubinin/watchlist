@@ -41,6 +41,8 @@ RSpec.describe ApplicationController do
   end
 
   describe "default URL options" do
+    after { I18n.locale = default_locale }
+
     it "include a locale" do
       I18n.locale = custom_locale
       expect(root_path).to include("locale=#{custom_locale}")
