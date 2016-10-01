@@ -9,4 +9,8 @@ class TmdbApi
       faraday.adapter Faraday.default_adapter
     end
   end
+
+  def movie_popular
+    client.get("movie/popular").body
+  end
 end
