@@ -1,10 +1,10 @@
 -# TODO: Decorate and localize.
 .ui.four.column.stackable.doubling.grid
   - @movies.each do |movie|
+    - movie_presenter = present(movie, with: MoviePresenter)
     .column
       .ui.fluid.card
-        - image_url = "https://image.tmdb.org/t/p/w500#{movie['backdrop_path']}"
-        .image= image_tag(image_url)
+        .image= image_tag(movie_presenter.backdrop_url)
         .content
           .header= movie["title"]
           .meta
