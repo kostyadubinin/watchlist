@@ -2,7 +2,7 @@
 require "rails_helper"
 
 RSpec.describe MoviePresenter, type: :helper do
-  before { stub_movie_popular_request }
+  before { stub_movie_popular_request_page_1 }
 
   # TODO: Extract to a single place.
   let(:api) { TmdbApi.new }
