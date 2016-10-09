@@ -56,8 +56,8 @@ RSpec.describe MoviePresenter, type: :helper do
 
       presenter = MoviePresenter.new(movie, helper)
 
-      expect(presenter.release_date)
-        .to eq(I18n.t("datetime.distance_in_words.over_x_years.one"))
+      expect(presenter.release_date).
+        to eq(I18n.t("datetime.distance_in_words.over_x_years.one"))
     end
   end
 end
