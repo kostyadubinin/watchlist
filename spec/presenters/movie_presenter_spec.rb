@@ -28,7 +28,10 @@ RSpec.describe MoviePresenter, type: :helper do
 
   describe "#vote_average" do
     it "rounds vote average" do
-      expect(presenter.vote_average).to eq(6.0)
+      movie = { "vote_average" => 5.85 }
+      presenter = MoviePresenter.new(movie, helper)
+
+      expect(presenter.vote_average).to eq("5.9")
     end
   end
 end
