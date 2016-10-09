@@ -7,7 +7,9 @@
       .content
         .header= movie["title"]
         .meta
-          %span= movie["release_date"]
+          %span
+            %i.fa.fa-calendar
+            = movie_presenter.release_date
       .extra.content
         %i.fa.fa-star
         = movie_presenter.vote_average
