@@ -31,19 +31,32 @@ RSpec.describe TmdbApi do
   end
 
   describe "#movie_popular" do
-    subject { described_class.new.movie_popular }
-    before { stub_movie_popular_request }
+    context "basic" do
+      before { stub_movie_popular_request_page_1 }
 
-    it "contains current page number" do
-      expect(subject["page"]).to eq(1)
+      subject { described_class.new.movie_popular }
+
+      it "contains current page number" do
+        expect(subject["page"]).to eq(1)
+      end
+
+      it "returns 20 results" do
+        expect(subject["results"].count).to eq(20)
+      end
+
+      it "contains result's id" do
+        expect(subject["results"][0]["id"]).to eq(297_761)
+      end
     end
 
-    it "returns 20 results" do
-      expect(subject["results"].count).to eq(20)
-    end
+    context "pagination" do
+      before { stub_movie_popular_request_page_2 }
 
-    it "contains result's id" do
-      expect(subject["results"][0]["id"]).to eq(297_761)
+      subject { described_class.new.movie_popular(page: 2) }
+
+      it "accepts page number" do
+        expect(subject["results"][0]["id"]).to eq(297_761)
+      end
     end
   end
 end

@@ -11,7 +11,7 @@ class TmdbApi
     end
   end
 
-  def movie_popular
-    client.get("movie/popular").body
+  def movie_popular(page: 1)
+    client.get("movie/popular", page: page).body
   end
 end
