@@ -32,7 +32,7 @@ RSpec.describe TmdbApi do
 
   describe "#movie_popular" do
     context "basic" do
-      before { stub_movie_popular_request_page_1 }
+      before { stub_movie_popular_request }
 
       subject { described_class.new.movie_popular }
 
@@ -50,7 +50,7 @@ RSpec.describe TmdbApi do
     end
 
     context "pagination" do
-      before { stub_movie_popular_request_page_2 }
+      before { stub_movie_popular_request }
 
       subject { described_class.new.movie_popular(page: 2) }
 
