@@ -6,7 +6,11 @@ RSpec.describe "movies/index" do
   before { stub_movie_popular_request }
 
   it "displays 20 movies" do
-    assign(:movies, api.movie_popular["results"])
+    movies = Kaminari.
+             paginate_array(api.movie_popular["results"], total_count: 145).
+             page(1)
+
+    assign(:movies, movies)
 
     render
 

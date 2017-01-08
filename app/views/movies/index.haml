@@ -16,3 +16,9 @@
         .right.floated
           %i.fa.fa-users
           = movie["vote_count"]
+
+.ui.two.column.grid
+  .column
+    = link_to_previous_page @movies, "Previous", class: "ui button"
+  .right.aligned.column
+    = link_to_next_page @movies, "Next", class: "ui button"
