@@ -1,10 +1,5 @@
-.ui.huge.secondary.menu
-  %a.active.red.item
-    = t(".movies")
-  %a.item
-    = t(".people")
-  .right.menu
-    = render "search_form"
-    = render "locale_switcher"
-    %a.ui.item
-      = t(".log_out")
+.navbar.navbar-toggleable-md.navbar-light.bg-faded.my-3
+  %ul.navbar-nav.mr-auto
+    %li.nav-item.active
+      = link_to "Movies", nil, class: "nav-link"
+    %li.nav-item= render "locale_switcher"

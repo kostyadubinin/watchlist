@@ -4,4 +4,4 @@
 [![Coverage Status](https://img.shields.io/coveralls/kostyadubinin/watchlist/master.svg)](https://coveralls.io/github/kostyadubinin/watchlist?branch=master)
 [![security](https://hakiri.io/github/kostyadubinin/watchlist/master.svg)](https://hakiri.io/github/kostyadubinin/watchlist/master)
 
-A website built with Rails and Semantic UI.
+A website built with Rails and Bootstrap.
