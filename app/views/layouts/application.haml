@@ -1,14 +1,17 @@
 !!!
 %html
   %head
-    %meta{ content: "text/html; charset=UTF-8", "http-equiv": "Content-Type" }
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no" }
+
     %title Watchlist
+
     = csrf_meta_tags
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
-  %body.site
-    .site-header
-      .ui.container= render "header"
-    .site-content
-      .ui.container= yield
-    .site-footer= render "footer"
+
+  %body
+    .container
+      = render "header"
+      = yield
+    = render "footer"

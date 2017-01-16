@@ -1,24 +1,24 @@
 -# TODO: Decorate and localize.
-.ui.four.stackable.doubling.cards
-  - @movies.each do |movie|
-    - movie_presenter = present(movie, with: MoviePresenter)
-    .ui.card
-      .image= image_tag(movie_presenter.backdrop_url)
-      .content
-        .header= movie["title"]
-        .meta
-          %span
-            %i.fa.fa-calendar
-            = movie_presenter.release_date
-      .extra.content
-        %i.fa.fa-star
-        = movie_presenter.vote_average
-        .right.floated
-          %i.fa.fa-users
-          = movie["vote_count"]
+- @movies.each_slice(3) do |movies|
+  -# TODO: Set a proper vertical spacing. mb-4 doesn't look good.
+  .card-deck.mb-4
+    - movies.each do |movie|
+      - movie_presenter = present(movie, with: MoviePresenter)
+      .card
+        = image_tag movie_presenter.backdrop_url, class: "card-img-top img-fluid"
+        .card-block
+          %h6.card-title= movie["title"]
+        .card-footer.text-muted
+          %i.fa.fa-star
+          = movie_presenter.vote_average
+          .float-right
+            %i.fa.fa-users
+            = movie["vote_count"]
 
-.ui.two.column.grid
-  .column
-    = link_to_previous_page @movies, "Previous", class: "ui button"
-  .right.aligned.column
-    = link_to_next_page @movies, "Next", class: "ui button"
+.row
+  .col
+    %p= link_to_previous_page @movies, "Previous", class: "btn btn-secondary"
+  .col.text-right
+    %p= link_to_next_page @movies, "Next", class: "btn btn-secondary"
+
+%p

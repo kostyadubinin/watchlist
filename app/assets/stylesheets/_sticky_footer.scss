@@ -1,24 +1,19 @@
-// Sticky Footer
-// Source: http://bit.ly/2b6zoMm
-// Description: http://bit.ly/1Lt1vzH
-//
-// 1. Avoid the IE 10-11 `min-height` bug.
-// 2. Set `flex-shrink` to `0` to prevent some browsers from
-//    letting these items shrink to smaller than their content's default
-//    minimum size. See http://bit.ly/1Mn35US for details.
-// 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+// http://v4-alpha.getbootstrap.com/examples/sticky-footer/
 
-.site {
-  display: flex;
-  flex-direction: column;
-  height: 100%; // 1, 3
+html {
+  min-height: 100%;
+  position: relative;
 }
 
-.site-header,
-.site-footer {
-  flex: none; // 2
+body {
+  margin-bottom: 60px;
 }
 
-.site-content {
-  flex: 1 0 auto; // 2
+.footer {
+  background-color: $footer-bg;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  width: 100%;
 }

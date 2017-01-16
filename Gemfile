@@ -3,6 +3,11 @@ source "https://rubygems.org"
 
 ruby "2.4.0"
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
+gem "bootstrap"
 gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.2"
 gem "faraday"
