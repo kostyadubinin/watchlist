@@ -2,6 +2,6 @@
   %button.navbar-toggler.navbar-toggler-right{ type: "button", data: { toggle: "collapse", target: "#navbarSupportedContent" } }
     %span.navbar-toggler-icon
   = link_to "Movies", root_path, class: "navbar-brand"
-  #navbarSupportedContent.collapse.navbar-collapse
+  .collapse.navbar-collapse#navbarSupportedContent
     %ul.navbar-nav.mr-auto
       %li.nav-item= render "locale_switcher"
