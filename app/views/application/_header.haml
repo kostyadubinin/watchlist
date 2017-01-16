@@ -1,5 +1,7 @@
-.navbar.navbar-toggleable-md.navbar-light.bg-faded.my-3
-  %ul.navbar-nav.mr-auto
-    %li.nav-item.active
-      = link_to "Movies", nil, class: "nav-link"
-    %li.nav-item= render "locale_switcher"
+%nav.navbar.navbar-toggleable-md.navbar-light.bg-faded.my-3
+  %button.navbar-toggler.navbar-toggler-right{ type: "button", data: { toggle: "collapse", target: "#navbarSupportedContent" } }
+    %span.navbar-toggler-icon
+  = link_to "Movies", root_path, class: "navbar-brand"
+  .collapse.navbar-collapse#navbarSupportedContent
+    %ul.navbar-nav.mr-auto
+      %li.nav-item= render "locale_switcher"
