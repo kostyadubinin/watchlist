@@ -1,4 +1,8 @@
 nl:
+  movies:
+    index:
+      next: "Volgende"
+      previous: "Voorgaand"
   application:
     header:
       movies: "Films"

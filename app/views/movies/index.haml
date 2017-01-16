@@ -17,8 +17,8 @@
 
 .row
   .col
-    %p= link_to_previous_page @movies, "Previous", class: "btn btn-secondary"
+    %p= link_to_previous_page @movies, t(".previous"), class: "btn btn-secondary"
   .col.text-right
-    %p= link_to_next_page @movies, "Next", class: "btn btn-secondary"
+    %p= link_to_next_page @movies, t(".next"), class: "btn btn-secondary"
 
 %p

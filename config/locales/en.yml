@@ -1,4 +1,8 @@
 en:
+  movies:
+    index:
+      next: "Next"
+      previous: "Previous"
   application:
     header:
       movies: "Movies"
