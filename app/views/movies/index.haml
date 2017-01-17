@@ -1,10 +1,8 @@
--# TODO: Decorate and localize.
-- @movies.each_slice(3) do |movies|
-  -# TODO: Set a proper vertical spacing. mb-4 doesn't look good.
-  .card-deck.mb-4
-    - movies.each do |movie|
-      - movie_presenter = present(movie, with: MoviePresenter)
-      .card
+.row
+  - @movies.each do |movie|
+    - movie_presenter = present(movie, with: MoviePresenter)
+    .col-md-6.col-lg-4.col-xl-3
+      .card.mb-3
         = image_tag movie_presenter.backdrop_url, class: "card-img-top img-fluid"
         .card-block
           %h6.card-title= movie["title"]
