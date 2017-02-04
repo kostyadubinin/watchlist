@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "movies#index"
 
   concern :paginatable do
-    get '(page/:page)', action: :index, on: :collection, as: ''
+    get "(page/:page)", action: :index, on: :collection, as: ""
   end
 
   resources :movies, only: :index, concerns: :paginatable
