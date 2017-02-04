@@ -51,7 +51,7 @@ RSpec.describe ApplicationController do
 
   describe "#api" do
     it "responds to #movie_popular" do
-      api = ApplicationController.new.send(:api)
+      api = described_class.new.send(:api)
       expect(api).to respond_to(:movie_popular)
     end
   end
