@@ -4,12 +4,12 @@ require "rails_helper"
 RSpec.describe MoviePresenter, type: :helper do
   before { stub_movie_popular_request }
 
+  subject(:presenter) { MoviePresenter.new(movie, helper) }
+
   # TODO: Extract to a single place.
   let(:api) { TmdbApi.new }
 
   let(:movie) { api.movie_popular["results"].first }
-
-  subject(:presenter) { MoviePresenter.new(movie, helper) }
 
   it "aliases #movie to #model" do
     expect(presenter.movie).to equal(presenter.model)
