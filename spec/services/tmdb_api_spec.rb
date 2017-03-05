@@ -3,29 +3,29 @@ require "rails_helper"
 
 RSpec.describe TmdbApi do
   describe "#client" do
-    subject { described_class.new.client }
+    subject(:client) { described_class.new.client }
 
     it "uses api.themoviedb.org host" do
-      expect(subject.host).to eq("api.themoviedb.org")
+      expect(client.host).to eq("api.themoviedb.org")
     end
 
     it "uses proper api_key" do
       ENV["TMDB_API_KEY"] = "tmdb_api_key"
-      expect(subject.params[:api_key]).to eq("tmdb_api_key")
+      expect(client.params[:api_key]).to eq("tmdb_api_key")
     end
 
     it "uses HTTPS" do
-      expect(subject.scheme).to eq("https")
+      expect(client.scheme).to eq("https")
     end
 
     it "uses current locale" do
-      expect(subject.params[:language]).to eq(I18n.locale)
+      expect(client.params[:language]).to eq(I18n.locale)
     end
 
     # TODO: Looks weird.
     it "uses custom locale" do
       I18n.locale = (I18n.available_locales - [I18n.default_locale]).first
-      expect(subject.params[:language]).to eq(I18n.locale)
+      expect(client.params[:language]).to eq(I18n.locale)
       I18n.locale = I18n.default_locale
     end
   end
@@ -34,28 +34,28 @@ RSpec.describe TmdbApi do
     context "basic" do
       before { stub_movie_popular_request }
 
-      subject { described_class.new.movie_popular }
+      subject(:client) { described_class.new.movie_popular }
 
       it "contains current page number" do
-        expect(subject["page"]).to eq(1)
+        expect(client["page"]).to eq(1)
       end
 
       it "returns 20 results" do
-        expect(subject["results"].count).to eq(20)
+        expect(client["results"].count).to eq(20)
       end
 
       it "contains result's id" do
-        expect(subject["results"][0]["id"]).to eq(297_761)
+        expect(client["results"][0]["id"]).to eq(297_761)
       end
     end
 
     context "pagination" do
       before { stub_movie_popular_request }
 
-      subject { described_class.new.movie_popular(page: 2) }
+      subject(:client) { described_class.new.movie_popular(page: 2) }
 
       it "accepts page number" do
-        expect(subject["results"][0]["id"]).to eq(297_761)
+        expect(client["results"][0]["id"]).to eq(297_761)
       end
     end
   end
