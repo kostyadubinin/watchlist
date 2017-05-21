@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class TmdbApi
   API_URL = "https://api.themoviedb.org/3/"
 

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module TmdbApiHelper
   def stub_movie_popular_request
     stub_request(
