@@ -20,7 +20,7 @@ gem "jquery-rails"
 gem "kaminari"
 gem "pg"
 gem "puma", "~> 3.0"
-gem "rails", "~> 5.0.0"
+gem "rails", "~> 5.1.0"
 gem "rails-i18n"
 gem "routing-filter"
 gem "sass-rails", "~> 5.0"
@@ -49,6 +49,5 @@ end
 group :development do
   gem "bullet"
   gem "listen", "~> 3.1"
-  gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
