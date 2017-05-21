@@ -49,5 +49,4 @@ end
 group :development do
   gem "bullet"
   gem "listen", "~> 3.1"
-  gem "spring-watcher-listen", "~> 2.0.0"
 end
