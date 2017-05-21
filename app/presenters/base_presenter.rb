@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class BasePresenter
   IMAGES_SECURE_BASE_URL = "https://image.tmdb.org/t/p/"
   BACKDROP_SIZE = "w780"
