@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby "2.4.0"
+ruby "2.4.2"
 
 source "https://rails-assets.org" do
   gem "rails-assets-tether", ">= 1.3.3"
