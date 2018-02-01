@@ -10,6 +10,7 @@ end
 
 gem "autoprefixer-rails"
 gem "bootstrap"
+gem "clearance"
 gem "coffee-rails", "~> 4.2"
 gem "faraday"
 gem "faraday_middleware"
