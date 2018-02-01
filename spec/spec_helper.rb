@@ -7,7 +7,7 @@
 # dependencies and performs the additional setup, and require it from the spec
 # files that actually need it.
 require "webmock/rspec"
-require 'clearance/rspec'
+require "clearance/rspec"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
