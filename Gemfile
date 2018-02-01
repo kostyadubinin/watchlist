@@ -8,9 +8,9 @@ source "https://rails-assets.org" do
   gem "rails-assets-tether", ">= 1.3.3"
 end
 
-gem "clearance"
 gem "autoprefixer-rails"
 gem "bootstrap"
+gem "clearance"
 gem "coffee-rails", "~> 4.2"
 gem "faraday"
 gem "faraday_middleware"
