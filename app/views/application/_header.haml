@@ -1,7 +1,8 @@
-%nav.navbar.navbar-toggleable-md.navbar-light.bg-faded.my-3
-  %button.navbar-toggler.navbar-toggler-right{ type: "button", data: { toggle: "collapse", target: "#navbarSupportedContent" } }
-    %span.navbar-toggler-icon
+%nav.navbar.navbar-expand-sm.navbar-light.bg-light.my-3
   = link_to t(".movies"), root_path, class: "navbar-brand"
-  .collapse.navbar-collapse#navbarSupportedContent
-    %ul.navbar-nav.mr-auto
-      %li.nav-item= render "locale_switcher"
+  %button.navbar-toggler{ "aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button" }
+    %span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item
+        = render "locale_switcher"
