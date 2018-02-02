@@ -1,3 +1,6 @@
+Rails:
+  Enabled: true
+
 Metrics/BlockLength:
   Enabled: false
 
@@ -12,3 +15,7 @@ Style/StringLiterals:
 
 Layout/DotPosition:
   EnforcedStyle: trailing
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
