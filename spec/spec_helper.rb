@@ -8,6 +8,7 @@
 # files that actually need it.
 require "webmock/rspec"
 
+# TODO: Add ready made feature specs for Clearance.
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
