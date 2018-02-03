@@ -8,6 +8,7 @@ source "https://rails-assets.org" do
   gem "rails-assets-tether", ">= 1.3.3"
 end
 
+# TODO: Check if this gem is still needed.
 gem "autoprefixer-rails"
 gem "bootstrap"
 gem "clearance"

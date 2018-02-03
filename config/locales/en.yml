@@ -39,6 +39,8 @@ en:
       movies: "Movies"
       people: "People"
       log_out: "Log out"
+      sign_in: Sign in
+      sign_out: Sign out
     search_form:
       input_placeholder: "Search..."
     locale_switcher:

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "rails_helper"
+require 'clearance/rspec'
 
 RSpec.describe MoviesController do
   describe "GET index" do

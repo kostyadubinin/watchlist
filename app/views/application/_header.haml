@@ -3,6 +3,11 @@
   %button.navbar-toggler{ "aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button" }
     %span.navbar-toggler-icon
   .collapse.navbar-collapse#navbarNav
-    %ul.navbar-nav
+    -# TODO: Extract from the list.
+    %ul.navbar-nav.mr-auto
       %li.nav-item
         = render "locale_switcher"
+    - if signed_in?
+      = button_to t(".sign_out"), sign_out_path, method: :delete, class: "btn btn-outline-secondary", form_class: "form-inline"
+    - else
+      = button_to t(".sign_in"), sign_in_path, method: :get, class: "btn btn-outline-secondary", form_class: "form-inline"
