@@ -6,7 +6,3 @@
 
 
 A website built with Rails and Bootstrap.
-
-## TODO
-
-* Add a contributing guide with a notice about removing unused translations.
